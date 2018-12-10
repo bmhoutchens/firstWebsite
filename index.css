@@ -1,0 +1,86 @@
+@keyframes slideInLeft{
+    from {
+        transform: translate3d(-100%,0,0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0,0,0);
+    }
+}
+
+.topWalkthrough{
+    font-family: 'Righteous', cursive;
+    font-size: 24px;
+    color: blue;
+    animation-name: slideInLeft;
+    animation-duration: 3s;
+    text-align: left;
+    background-color: darkgrey;
+}
+
+body{
+    text-align: center;
+}
+
+code{
+    font-family: sans-serif;
+}
+
+footer{
+    background-color: darkgray;
+}
+
+footer h2{
+    text-align: left;
+}
+footer h5{
+    display: inline-block;
+}
+
+body h3{
+    font-family: "righteous", cursive;
+    text-align: right;
+    font-size: 24px;
+    padding-right: 29vw;
+}
+
+.sectionBlock{
+    font-family: 'Raleway', sans-serif;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    border: 2px dashed black;
+    border-radius: 1em;
+    padding: 0em 1.25em 0em 1.25em;
+}
+
+.codeBlock{
+    font-family: sans-serif;
+    background-color: rgba(14, 13, 13, 0.671);
+    color: rgb(226, 226, 226);
+    text-align: left;
+    border-radius: 1em;
+}
+
+#sideBar{
+    background-color: rgba(75, 14, 21, 0.39);
+    font-family: 'Raleway', sans-serif;
+    border: 2px solid black;
+    border-radius: 1em;
+    margin-left: 75%;
+}
+
+a:visited{
+    color: rgb(226, 8, 208);
+}
+
+#sideBar a:link{
+    color: black;
+    text-decoration: none;
+}
+
+#navigation{
+    position: fixed;
+    top: 15vh;
+    right: 2vw;
+    width: 100%;
+}

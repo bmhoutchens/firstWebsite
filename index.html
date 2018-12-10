@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website JavaScript Tutorial</title>
+        <link rel = "stylesheet" type = "text/css" href = "testWebsite.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Righteous" rel="stylesheet">
+    </head>
+    <body>
+        <Header class="topWalkthrough"><h1><i>A Walkthough of JavaScript</i></h1></Header>
+
+        <article>
+            <header>
+                <h3>Conditionals</h3>
+            </header>
+
+            <section class="sectionBlock">
+                <h4>If Statements</h4>
+                <div class="codeBlock">
+                    <p><pre><code>
+    let isOne = true;
+
+    if(isOn == true){
+        console.log("The light is on!");
+    };
+                    </code></pre></p>
+                </div>
+
+                <p>
+                    An "if statement" is used to run a block of code based on whether a condition is true or not.
+                    notice, that 'if' is lowercase. This is usually used if you need your program to make a decision.
+                </p>
+
+                <h4>Else Statements</h4>
+                <div class="codeBlock">
+                    <p><pre><code>
+    let weather = 75;
+
+    if(weather < 70){
+        console.log("Wear a jacket");
+    } else {
+        console.log("No jacket necessary!");
+    };
+                    </code></pre></p>
+                </div>
+
+                <p>
+                    Similar to the "if statment", this type of code is used whether a condition is true or not, however,
+                    this code has an alternative set of instructions, based on whether another factor in your code is true or false.
+                </p>
+
+                <h4>Else If Statements</h4>
+                <div class="codeBlock">
+                        <p><pre><code>
+    let fb = 100;
+
+    if(fb % 3 == 0 && fb % 5 == 0){
+        console.log(FizzBuzz");
+    } else if(fb % 3 == 0){
+        console.log("Fizz");
+    } else if(fb % 5 == 0){
+        console.log("Buzz");
+    } else{
+        console.log(fb);
+    };
+                        </code></pre></p>
+                </div>
+
+                <p>
+                    This is an extension of the "else statement". This type of code has many branches of statements available to run,
+                    based on what factors may be true in the code.
+                </p>
+
+                <h4>Switches</h4>
+                <div class="codeBlock">
+                    <p><pre><code>
+    var friend = "Brandon"
+
+    switch(friendTwo) {
+        case "Brandon":
+            console.log("That is my name!");
+            break;
+        case "Justis":
+            console.log("You are my desk neighbor");
+            break;
+        case "Kito":
+            console.log("You play Warhammer 40k");
+            break;
+        case "Sean":
+            console.log("You're bald!");
+            break;
+        default:
+            console.log("Its nice to meet you!");
+    };
+                    </code></pre></p>
+                </div>
+
+                <p>
+                    This is alternative form of conditionals. Great for use on items that have many conditions.
+                    The default line at the end is a catchall: whatever doesn't work for the rest of the conditional,
+                    gets executed here.
+                </p>
+
+                <h4>Ternary</h4>
+                <div class="codeBlock">
+                    <p><pre><code>
+    let x = 14;
+
+    (x >= 10) ? console.log(true) : console.log(false);
+                    </code></pre></p>
+                </div>
+
+                <p>
+                    Ternary is a great way to write an if statement in a single line. Ususally used when only a few
+                    outcomes are required, but can be used for any amount.
+                </p>
+            </section>
+        </article>
+        <br>
+        <br>
+        <article>
+
+                <header>
+                    <h3><a name = "loopNav">Loops</a></h3>
+                </header>
+                <section class = "sectionBlock">
+                    <h4>For Loop</h4>
+                    <div class="codeBlock">
+                        <p><pre><code>
+    for(var i = 0; i < 10; i++){
+        console.log(i);
+    };
+                        </code></pre></p>
+                    </div>
+
+                    <p>
+                        A for loop is used to repeat a task several times over, provided you have a known end goal.
+                        This is much better than having to type out the same task 50, 100, 300, or even more times in a row!
+                    </p>
+
+                    <h4>While Loop</h4>
+                    <div class="codeBlock">
+                        <p><pre><code>
+    while(i < 10){
+        console.log(i);
+        i++;
+    };
+                        </code></pre></p>
+                    </div>
+
+                    <p>
+                        The While loops is a loop used when you don't know how many iterations you want,
+                        but you know you need to run something several times. Used with a boolean as a 
+                        condition, this loop will run until the condition is false.
+                    </p>
+
+                    <h4>Do While Loops</h4>
+                    <div class="codeBlock">
+                        <p><pre><code>
+    let i = 0;
+
+    do{
+        console.log(i);
+        i++;
+    }
+    while(i >= 10)
+                        </code></pre></p>
+                    </div>
+
+                    <p>
+                        Similar to the while loop, this loop also runs on a boolean condition. This loops
+                        is different, however, because this will run at least once before the condition is checked to be
+                        either true, or false. This means that this loop will always execute at least one time.
+                    </p>
+
+                    <h4>For In Statement</h4>
+                    <div class="codeBlock">
+                        <p><pre><code>
+    let catArray = ["Tabby", "Burmese", "Ragdoll", Tortie"];
+
+    for(cat in catArray){
+        console.log(cat);
+        console.log(catArray[cat]);
+    };
+                        </code></pre></p>
+                    </div>
+
+                    <p>
+                        Used in conjunction with arrays, for in statments are typically used to grab the index 
+                        location for an item in the array. This can however be used to grab the actual item, as long as
+                        console.log is used.
+                    </p>
+
+                    <h4>For Of Statement</h4>
+                    <div class="codeBlock">
+                            <p><pre><code>
+    let catArray = ["Tabby", "Burmese", "Ragdoll", Tortie"];
+                                
+    for(cat of catArray){
+        console.log(cat);
+        console.log(catArray[cat]);
+    };
+                            </code></pre></p>
+                    </div>
+
+                    <p>
+                        Very similar to the For In Statement, the For <b>Of</b> Statement just reverses the logic,
+                        meaning, instead of pulling the index location, this loop will pull the actual item.
+                    </p>
+
+                    <h4>For Each Statement</h4>
+                    <div class="codeBlock">
+                            <p><pre><code>
+    const petArray = ["cat", "dog", "fish"];
+
+    petArray.forEach(pet => {
+        console.log(pet);
+    });
+                            </code></pre></p>
+                    </div>
+
+                    <p>
+                        A for each loop is similar to a for of statement, 
+                        in that it pulls items out of seperate indexes in an array.>
+                    </p>
+
+                    <h4>Break Statement</h4>
+                    <div class="codeBlock">
+                            <p><pre><code>
+    for(i = 0; i < 10; i++){
+        if(i === 3){break;}
+            console.log(`The number i s${i}`);
+    };
+                            </code></pre></p>
+                    </div>
+
+                    <p>
+                        Used to end the function of a loop, break statements are typically used once 
+                        a condition is met. This statement is also used in switch statements, to stop the
+                        execution of the rest of the statement.
+                    </p>
+
+                    <h4>Contintue Statement</h4>
+                    <div class="codeBlock">
+                            <p><pre><code>
+    for(i = 0; i < 10; i++){
+        if (i === 3){continue;}
+        console.log(`Your number is ${i}`);
+    };
+                            </code></pre></p>
+                    </div>
+
+                    <p>
+                        Similar to the break statement, a continue statement stops a loop from running, 
+                        but only for a single iteration. In this instance, the loop will skip its fourth
+                        iteration (the iteration where i = 3).
+                    </p>
+                </section>
+            </article>
+            <br>
+            <br>
+            <article>
+                    <header>
+                        <h3><a name = "functionNav">Functions</a></h3>
+                    </header>
+
+                    <section class = "sectionBlock">
+                        <h4>Standard Functions</h4>
+                        <div class="codeBlock">
+                            <p><pre><code>
+    function counting(){
+        for(i = 1; i <= 10; i++){
+            console.log(i);
+        }
+    };
+    counting();
+                            </code></pre></p>
+                        </div>
+
+                        <p>
+                            Functions allow a programmer to write one block of code, and then call it
+                            as many times as they wish throughout the program, without having to rewrite it.
+                            This is an extremely useful tool, as it allows faster coding, and a cleaner program.
+                        </p>
+
+                        <h4>Fat Arrow Functions</h4>
+                        <div class="codeBlock">
+                            <p><pre><code>
+    let name = (firstName) =>
+    console.log(`${firstName}, is what they call me`);
+
+    name("Brandon");
+                            </code></pre></p>
+                        </div>
+
+                        <p>
+                            Just like a normal function, a fat arrow function can be called later in the code.
+                            These functions however, are best used for simple functions, with only one or two tasks.
+                        </p>
+                    </section>
+                </article>
+                <br>
+                 <br>
+                <article>
+                        <header>
+                            <h3><a name = "arrayNav">Arrays</a></h3>
+                        </header>
+
+                        <section class="sectionBlock">
+                            <div class="codeBlock">
+                                <p><pre><code>
+    let favMovies = ["Alien", "Aliens", "Alien Resurection"];
+                                </code></pre></p>
+                            </div>
+
+                            <p>
+                                Arrays, are essentially a list of information that is all held within 
+                                one variable. They are very useful in conjunction with loops to store an 
+                                enormous amount of data, relatively easily.
+                            </p>
+                        </section>
+                    </article>
+                    <br>
+                     <br>
+                    <article>
+                            <header>
+                                <h3><a name = "objectNav">Objects</a></h3>
+                            </header>
+
+                            <section class="sectionBlock">
+                                <div class = "codeBlock">
+                                    <p><pre><code>
+    let garden = {
+        vegetable: "zucchini",
+        flower: "sun flower",
+        fruit: "grape",
+        water: true,
+        sun: true,
+        size: 10
+    };
+                                    </code></pre></p>
+                                </div>
+
+                                <p>
+                                    Objects are just big containers that hold related information.
+                                    This information could be any data type, including arrays, and other objects.
+                                    Objects are used in databases to hold together all the information about
+                                    specific items.
+                                </p>
+                            </section>
+                        </article>
+
+                        <sidebar id="navigation">
+                            <nav id="sideBar">
+                                <h1>Easy Navigation</h1>
+                                <h6>For your convenience</h6>
+                                <h2><a href ="#top">Conditionals</a></h2>
+                                <h2><a href = "#loopNav">Loops</a></h2>
+                                <h2><a href = "#functionNav">Functions</a></h2>
+                                <h2><a href = "#arrayNav">Arrays</a></h2>
+                                <h2><a href = "#objectNav">Objects</a></h2>
+                            </nav>
+                        </sidebar>
+                        <hr>
+                        <footer>
+                            <h2>Some external links, for your convenience</h2>
+                            <section>
+                                <h5><a href="https://www.w3schools.com/js/js_if_else.asp" rel="noopener" target="blank"> Conditionals</a></h5>
+                                <h5><pre>   </pre></h5>
+                                <h5><a href="https://www.w3schools.com/js/js_loop_for.asp" rel="noopener" target="blank"> Loops</a></h5>
+                                <h5><pre>   </pre></h5>
+                                <h5><a href="https://www.w3schools.com/js/js_functions.asp" rel="noopener" target="blank"> Functions</a></h5>
+                                <h5><pre>   </pre></h5>
+                                <h5><a href="https://www.w3schools.com/js/js_arrays.asp" rel="noopener" target="blank"> Arrays</a></h5>
+                                <h5><pre>   </pre></h5>
+                                <h5><a href="https://www.w3schools.com/js/js_objects.asp" rel="noopener" target="blank"> Objects</a></h5>
+                            </section>
+                        </footer>
+    </body>
+</html>
