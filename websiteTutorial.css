@@ -8,6 +8,9 @@
     }
 }
 
+a:hover{
+    color: white;
+}
 .topWalkthrough{
     font-family: 'Righteous', cursive;
     font-size: 24px;
